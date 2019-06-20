@@ -1,0 +1,7 @@
+{
+    "name": "MyShortener",
+    "version": "1.0.0",
+    "description": "MyShorterner API Documentation",
+    "title": "API Documentation of MyShorterner",
+    "url" : "https://localhost/myshortener/public/api/v1"
+  }
