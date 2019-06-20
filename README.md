@@ -1,18 +1,15 @@
 # myshortener
-***
+
 MyShortener is an API to make an URL shortener.
 
 ## Requirements
-***
   - Laravel 
   - MySQL
 
 ## Version
-***
 1.0.0
 
 ## Tech
-***
 
 * [Laravel] - The PHP Framework For Web Artisans
 * [Composer] - Dependency Manager for PHP
@@ -29,7 +26,11 @@ composer install
 cp .env.example .env
 ```
 
-If you don't have `.env` file you can use the example one. Just rename `.env.example` to `.env`. Enter your configuration here (Database and App Url Configurations).
+If you don't have `.env` file you can use the example one. Just rename `.env.example` to `.env`. Enter your configuration here (Database and App Url Configurations). Set the application key
+
+```sh
+php artisan key:generate
+```
 
 ## Migrations
 
@@ -48,11 +49,24 @@ php artisan serve
 ```
 
 ## APIDocs
+To generate the APIDocs first you have to install apidoc globally
 
-Check the APIDocs [APIDocs](https://github.com/reysmerwvr/myshortener/tree/master/app/Helpers/ApiDocs.php).
+```sh
+npm install apidoc -g
+```
+
+After that you can generate the APIDocs running the following commands
+
+```sh
+cd myshortener
+apidoc -i ./app/Helpers/ -o ./public/apidocs
+```
+
+After this you should be able to see the API Documentation in your browser hitting http://localhost/yourprojectname/public/apidocs
+
+APIDocs file [APIDocs](https://github.com/reysmerwvr/myshortener/tree/master/app/Helpers/ApiDocs.php).
 
 ## Todos
- ***
   - Write tests
   - Add code comments
 
